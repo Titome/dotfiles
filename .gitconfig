@@ -4,7 +4,7 @@
     branch = auto
 [user]
     name = Titome
-    email = moi@email.com
+    email = github@timotheegirard.com
 [alias]
     ci = commit
     co = checkout
