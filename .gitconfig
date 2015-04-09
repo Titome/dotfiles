@@ -1,0 +1,12 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[user]
+    name = Titome
+    email = moi@email.com
+[alias]
+    ci = commit
+    co = checkout
+    st = status
+    br = branch
