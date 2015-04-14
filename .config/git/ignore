@@ -1,5 +1,6 @@
 # VIM
 *.swp
+tags
 
 # PYTHON
 __pycache__
