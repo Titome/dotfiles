@@ -11,4 +11,4 @@
     st = status
     br = branch
 [push]
-	default = simple
+    default = simple
