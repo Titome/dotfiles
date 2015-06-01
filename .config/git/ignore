@@ -4,3 +4,6 @@ tags
 
 # PYTHON
 __pycache__
+
+# SASS
+.sass-cache
