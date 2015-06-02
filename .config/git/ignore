@@ -2,6 +2,9 @@
 *.swp
 tags
 
+# JETBRAINS IDE
+.idea
+
 # PYTHON
 __pycache__
 
