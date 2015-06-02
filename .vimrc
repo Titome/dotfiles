@@ -17,14 +17,18 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'Shougo/neosnippet.vim'
 "NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'evidens/vim-twig'
 NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'stephpy/vim-yaml'
 NeoBundle 'sjbach/lusty'
 NeoBundle 'Shougo/neocomplcache'
 
@@ -90,6 +94,7 @@ set shell=/bin/bash
 
 " Configuration LustyExplorer
 set hidden
+nmap <leader>lh :LustyFilesystemExplorerFromHere<CR>
 
 " Configuration d'Ack
 
@@ -121,3 +126,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
