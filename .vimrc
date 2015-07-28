@@ -1,6 +1,8 @@
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
   " Required:
   set runtimepath+=/home/timothee/.vim/bundle/neobundle.vim/
@@ -28,7 +30,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'stephpy/vim-yaml'
+"NeoBundle 'stephpy/vim-yaml'
 NeoBundle 'sjbach/lusty'
 NeoBundle 'Shougo/neocomplcache'
 
@@ -71,7 +73,7 @@ set expandtab
 set shiftround
 
 " twig
-autocmd BufRead *.twig set filetype=htmltwig.html
+"autocmd BufRead *.twig set filetype=htmltwig.html
 autocmd BufNewFile,BufRead *.less set filetype=less
 
 " police
@@ -87,6 +89,9 @@ let mapleader = ","
 
 " Configuration du shell avec fish par défaut pour le système
 set shell=/bin/bash
+
+" Remove trailing
+:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 
 " CONFIGURATION DES PLUGINS
@@ -109,7 +114,13 @@ nmap <leader>ja mA:Ack "<C-r>=expand("<cword>")<cr>"
 nmap <leader>jA mA:Ack "<C-r>=expand("<cWORD>")<cr>"
 
 " Configuration de CtrlP
+
 let g:ctrlp_map = '<leader>c'
+
+" Ignore cache files for Symfony2
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/]app/cache$'
+    \ }
 
 " Configuration de neocomplcache
 let g:neocomplcache_enable_at_startup = 1
@@ -122,8 +133,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
