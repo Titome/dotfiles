@@ -16,8 +16,6 @@ call neobundle#begin(expand('/home/timothee/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
-"NeoBundle 'Shougo/neosnippet.vim'
-"NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'flazz/vim-colorschemes'
@@ -33,6 +31,8 @@ NeoBundle 'scrooloose/syntastic'
 "NeoBundle 'stephpy/vim-yaml'
 NeoBundle 'sjbach/lusty'
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -140,3 +140,23 @@ let g:syntastic_check_on_wq = 0
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" neosnippet
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
