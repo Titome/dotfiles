@@ -1,5 +1,6 @@
 # VIM
 *.swp
+*.swo
 tags
 
 # JETBRAINS IDE
