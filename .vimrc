@@ -1,52 +1,34 @@
-"NeoBundle Scripts-----------------------------
+" vim-plug configuration
+call plug#begin('~/.vim/plugged')
+
+" Add or remove your Bundles here:
+Plug 'bling/vim-airline'
+Plug 'chase/vim-ansible-yaml'
+Plug 'flazz/vim-colorschemes'
+Plug 'evidens/vim-twig'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+"Plug 'stephpy/vim-yaml'
+Plug 'sjbach/lusty'
+Plug 'Shougo/neocomplcache'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+
+call plug#end()
+
 if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
   endif
-
-  " Required:
-  set runtimepath+=/home/timothee/.vim/bundle/neobundle.vim/
 endif
 
-" Required:
-call neobundle#begin(expand('/home/timothee/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Add or remove your Bundles here:
-NeoBundle 'bling/vim-airline'
-NeoBundle 'chase/vim-ansible-yaml'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'evidens/vim-twig'
-NeoBundle 'Glench/Vim-Jinja2-Syntax'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/syntastic'
-"NeoBundle 'stephpy/vim-yaml'
-NeoBundle 'sjbach/lusty'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-
-" You can specify revision/branch/tag.
-"NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-
-" Required:
-call neobundle#end()
-
-" Required:
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
 
 syntax on
 set number
