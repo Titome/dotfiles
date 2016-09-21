@@ -59,7 +59,7 @@ set shiftround
 autocmd BufNewFile,BufRead *.less set filetype=less
 
 " police
-set guifont=Source\ Code\ Pro
+set guifont=Source\ Code\ Pro\ 11
 set antialias
 
 " changement de la touche échap
