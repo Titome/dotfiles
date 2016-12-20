@@ -53,13 +53,14 @@ set tabstop=4       " Indentation toutes les quatre colonnes
 set shiftwidth=4
 set expandtab
 set shiftround
+set encoding=utf-8
 
 " twig
 "autocmd BufRead *.twig set filetype=htmltwig.html
 autocmd BufNewFile,BufRead *.less set filetype=less
 
 " police
-set guifont=Source\ Code\ Pro\ 11
+set guifont=Source\ Code\ Pro\ 10
 set antialias
 
 " changement de la touche échap
