@@ -36,7 +36,12 @@ set showcmd
 set ignorecase              " Ignore la case lors d'une recherche
 set mouse=a
 set background=dark
-colorscheme solarized
+
+if has('gui_running')
+    colorscheme solarized
+else
+    colorscheme atom
+endif
 
 set ruler
 set wildmode=list:longest
