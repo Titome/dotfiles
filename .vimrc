@@ -33,7 +33,7 @@ filetype plugin indent on
 syntax on
 set number
 set showcmd
-set ignorecase              " Ignore la case lors d'une recherche
+set ignorecase                     " Ignore la case lors d'une recherche
 set mouse=a
 set background=dark
 
@@ -52,13 +52,18 @@ set incsearch
 set hlsearch
 set smartcase
 
-set smartindent     " Indentation intelligente
-set autoindent      " Conserve l'indentation sur une nouvelle ligneset softtabstop=4
-set tabstop=4       " Indentation toutes les quatre colonnes
+set smartindent                    " Indentation intelligente
+set autoindent                     " Conserve l'indentation sur une nouvelle ligneset softtabstop=4
+set tabstop=4                      " Indentation toutes les quatre colonnes
 set shiftwidth=4
 set expandtab
 set shiftround
-set encoding=utf-8
+set encoding=utf8
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+set autoread                       " Set to auto read when a file is changed from the outside
+set colorcolumn=80
+set wildmenu
 
 " twig
 "autocmd BufRead *.twig set filetype=htmltwig.html
