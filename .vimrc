@@ -8,14 +8,16 @@ Plug 'flazz/vim-colorschemes'
 Plug 'evidens/vim-twig'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'kien/ctrlp.vim'
+Plug 'LycosaExplorer'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
+Plug 'stephpy/vim-php-cs-fixer'
 "Plug 'stephpy/vim-yaml'
-Plug 'sjbach/lusty'
+"Plug 'sjbach/lusty'
 Plug 'Shougo/neocomplcache'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
@@ -91,8 +93,11 @@ set shell=/bin/bash
 
 
 " Configuration LustyExplorer
+"set hidden
+"nmap <leader>lh :LustyFilesystemExplorerFromHere<CR>
+
+" Configuration LycosaExplorer
 set hidden
-nmap <leader>lh :LustyFilesystemExplorerFromHere<CR>
 
 " Configuration d'Ack
 
