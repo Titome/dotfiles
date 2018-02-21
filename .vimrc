@@ -4,13 +4,15 @@ call plug#begin('~/.vim/plugged')
 " Add or remove your Bundles here:
 Plug 'bling/vim-airline'
 Plug 'chase/vim-ansible-yaml'
+Plug 'dpelle/vim-Grammalecte'
 Plug 'flazz/vim-colorschemes'
 Plug 'evidens/vim-twig'
 Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'johngrib/vim-game-code-break'
 Plug 'kien/ctrlp.vim'
-Plug 'LycosaExplorer'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'posva/vim-vue'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
@@ -21,6 +23,7 @@ Plug 'stephpy/vim-php-cs-fixer'
 Plug 'Shougo/neocomplcache'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'vim-scripts/LycosaExplorer'
 
 call plug#end()
 
@@ -88,13 +91,13 @@ set shell=/bin/bash
 " Remove trailing
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
+" Configuration orthographique
+map <silent> <F7> "<Esc>:silent setlocal spell! spelllang=en<CR>"
+map <silent> <F6> "<Esc>:silent setlocal spell! spelllang=fr<CR>"
+
 
 " CONFIGURATION DES PLUGINS
 
-
-" Configuration LustyExplorer
-"set hidden
-"nmap <leader>lh :LustyFilesystemExplorerFromHere<CR>
 
 " Configuration LycosaExplorer
 set hidden
@@ -158,3 +161,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+" Configuration de Grammalecte
+let g:grammalecte_cli_py='/opt/grammalecte/cli.py'
